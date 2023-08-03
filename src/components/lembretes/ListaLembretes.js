@@ -5,7 +5,6 @@ const ListaLembretes = () => {
     { id: 1, title: "Bom dia Pessoal! Movimentar a entidade X até dia 31!", user: "Johan", completed: true },
     { id: 2, title: "Movimentação da entidade Y no mês 7 não realizada", user: "João Arthur", completed: false },
   ];
-
   return (
 <div className="reminders">
   <div className="header">

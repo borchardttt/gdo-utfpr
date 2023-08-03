@@ -8,7 +8,7 @@ import ListaLembretes from "./components/lembretes/ListaLembretes";
 import ListaMovimentacoes from "./components/movimentacoes/ListaMovimentacoes";
 import ListaEntidades from './components/entidades/ListaEntidades';
 import ListaUsuarios from './components/usuarios/ListaUsuarios';
-
+import LoginBox from './components/login/LoginBox';
 const App = () => {
   const [showListaMovimentacoes, setShowListaMovimentacoes] = useState(false);
   const [showDashboard, setShowDashboard] = useState(true);
@@ -79,6 +79,7 @@ const App = () => {
               <div className="bottom-data">
                 <MovimentacoesRecentes />
                 <ListaLembretes />
+                {/* <LoginBox /> */}
               </div>
             </main>
           )}
