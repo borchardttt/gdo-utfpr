@@ -20,21 +20,21 @@ const MovimentacoesRecentes = () => {
         <tbody>
           <tr>
             <td>
-              <p>Felipe Moura</p>
+              <p>Diego Marczal</p>
             </td>
             <td>14-08-2023</td>
             <td><span className="status completed">Aprovada</span></td>
           </tr>
           <tr>
             <td>
-              <p>Johansson Iongblode</p>
+              <p>Sediane Carmen</p>
             </td>
             <td>14-08-2023</td>
             <td><span className="status pending">Pendente</span></td>
           </tr>
           <tr>
             <td>
-              <p>Aurélio Muller</p>
+              <p>Paulo Soares</p>
             </td>
             <td>14-08-2023</td>
             <td><span className="status process">Aguardando Aprovação</span></td>

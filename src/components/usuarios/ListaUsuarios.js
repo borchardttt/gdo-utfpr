@@ -9,42 +9,13 @@ const ListaUsuarios = () => {
       id: 1,
       nome: "Gabriel Borchardt",
       usuario: "gabrielb",
-      email: "gabriel.borchardt@millpar.com",
-      matricula: "14687",
+      email: "gabriel.borchardt@utfpr.com"
     },
     {
       id: 2,
-      nome: "Felipe Moura",
-      usuario: "felipem",
-      email: "felipe.moura@millpar.com",
-      matricula: "13909"
-    },
-    {
-      id: 3,
-      nome: "Johan",
-      usuario: "johan",
-      email: "johansson.oliveira@millpar.com",
-      matricula: "1234"
-    },
-    {
-      id: 4,
-      nome: "João Arthur",
-      usuario: "joaoabm",
-      email: "joao.moraes@millpar.com",
-      matricula: "1234"
-    },
-    {
-      id: 5,
-      nome: "Aurélio Muller",
-      usuario: "aurelio",
-      email: "aurelio.muller@millpar.com",
-      matricula: "1234"
-    },    {
-      id: 6,
-      nome: "Gabriel Fiuza",
-      usuario: "gabriel",
-      email: "gabriel.fiuza@millpar.com",
-      matricula: "1234"
+      nome: "Roni FABIO",
+      usuario: "ronif",
+      email: "roni.fabio@utfpr.com"
     },
   ];
 
@@ -70,7 +41,6 @@ const ListaUsuarios = () => {
                 <th>Nome</th>
                 <th>Usuário</th>
                 <th>E-mail</th>
-                <th>Matricula</th>
               </tr>
             </thead>
             <tbody>
@@ -81,9 +51,8 @@ const ListaUsuarios = () => {
                   </td>
                   <td>{item.usuario}</td>
                   <td>{item.email}</td>
-                  <td>{item.matricula}</td>
                   <td>
-										<button className="btn-millpar-primary">
+										<button>
 											<i className='bx bx-show' style={{ color: '#ffffff' }}></i>
 										</button>
                   </td>

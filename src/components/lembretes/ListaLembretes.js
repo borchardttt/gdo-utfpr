@@ -2,8 +2,8 @@ import React from 'react';
 
 const ListaLembretes = () => {
   const tasks = [
-    { id: 1, title: "Bom dia Pessoal! Movimentar a entidade X até dia 31!", user: "Johan", completed: true },
-    { id: 2, title: "Movimentação da entidade Y no mês 7 não realizada", user: "João Arthur", completed: false },
+    { id: 1, title: "Bom dia Pessoal! Por favor inserir um movimento no orçamento do Refeitório até dia 31!", user: "Roni Fabio", completed: true },
+    { id: 2, title: "Movimentação de orçamento de Ativos de T.I não realizado.", user: "Eleandro Maschio", completed: false },
   ];
   return (
 <div className="reminders">

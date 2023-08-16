@@ -66,7 +66,7 @@ const SystemSidebar = ({ onMovimentacoesClick, onDashboardClick, onUsuariosClick
   return (
     <div className="sidebar close">
       <a href="#" className="logo">
-        <div className="logo-name">Millpar</div>
+        <div className="logo-name">UTFpr</div>
       </a>
       <ul className="side-menu">
         <li onClick={onDashboardClick}>

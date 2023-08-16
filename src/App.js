@@ -61,13 +61,13 @@ const App = () => {
             <main>
               <div className="header">
                 <div className="left">
-                  <h1>Movimentação Orçamentária</h1>
+                  <h1>Gestão de Orçamentos UTFPR</h1>
                   <br />
                   <h2>Bem vindo novamente, Usuário!</h2>
                   <ul className="breadcrumb">
                     <li><a href="#">Análise</a></li>
                     <li>/</li>
-                    <li><a href="#" className="active">Entidade (Nome da Entidade)</a></li>
+                    <li><a href="#" className="active">Orçamento 2023</a></li>
                   </ul>
                 </div>
                 <a href="#" className="report">
@@ -79,7 +79,7 @@ const App = () => {
               <div className="bottom-data">
                 <MovimentacoesRecentes />
                 <ListaLembretes />
-                {/* <LoginBox /> */}
+                <LoginBox />
               </div>
             </main>
           )}

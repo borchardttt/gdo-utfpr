@@ -8,14 +8,14 @@ const ListaEntidades = () => {
     {
       id: 1,
       entidade: "530000 - Financeiro",
-      centroDeCusto: "530001 - GERENCIA FINANCEIRA",
-      gestor: "Aurélio Muller",
+      centroDeCusto: "530001 - GERENCIA DE TI - SOFTWARE",
+      gestor: "Roni Fabio",
     },
     {
       id: 2,
       entidade: "550000 - Tecnologia da Informação",
       centroDeCusto: "550004 - Tecnologia da Informação",
-      gestor: "Aurélio Muller",
+      gestor: "Diego Marczal",
     },
   ];
 
@@ -51,7 +51,7 @@ const ListaEntidades = () => {
                   <td>{item.centroDeCusto}</td>
                   <td>{item.gestor}</td>
                   <td>
-										<button className="btn-millpar-primary">
+										<button>
 											<i className='bx bx-show' style={{ color: '#ffffff' }}></i>
 										</button>
                   </td>

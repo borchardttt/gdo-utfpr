@@ -7,7 +7,7 @@ const ListaMovimentacoes = () => {
   const dados = [
     {
       id: 1,
-      usuario: "Felipe Moura",
+      usuario: "Roni Fabio",
       data: "8/2023",
       contaContabil: "41110123",
       rubrica: "Consultoria de Sistemas",
@@ -15,61 +15,6 @@ const ListaMovimentacoes = () => {
       categoria: "Mover",
       status: "Aprovada",
       statusClass: "completed",
-    },
-    {
-      id: 2,
-      usuario: "Johansson Iongblode",
-      data: "8/2023",
-      contaContabil: "41110123",
-      rubrica: "Hoteis",
-      valor: "3.000",
-      categoria: "Mover",
-      status: "Aguardando Aprovação",
-      statusClass: "pending",
-    },
-    {
-      id: 3,
-      usuario: "Felipe Moura",
-      data: "8/2023",
-      contaContabil: "41110123",
-      rubrica: "Consultoria de Sistemas",
-      valor: "9.000",
-      categoria: "Mover",
-      status: "Aprovada",
-      statusClass: "completed",
-    },
-    {
-      id: 4,
-      usuario: "Johansson Iongblode",
-      data: "8/2023",
-      contaContabil: "41110123",
-      rubrica: "Hoteis",
-      valor: "3.000",
-      categoria: "Mover",
-      status: "Aguardando Aprovação",
-      statusClass: "pending",
-    },
-    {
-      id: 5,
-      usuario: "Felipe Moura",
-      data: "8/2023",
-      contaContabil: "41110123",
-      rubrica: "Consultoria de Sistemas",
-      valor: "9.000",
-      categoria: "Mover",
-      status: "Aprovada",
-      statusClass: "completed",
-    },
-    {
-      id: 6,
-      usuario: "Johansson Iongblode",
-      data: "8/2023",
-      contaContabil: "41110123",
-      rubrica: "Hoteis",
-      valor: "3.000",
-      categoria: "Mover",
-      status: "Pendente",
-      statusClass: "pending",
     },
   ];
 
@@ -116,7 +61,7 @@ const ListaMovimentacoes = () => {
                   <td><span className={`status ${item.statusClass}`}>{item.status}</span></td>
                   <td>
                     {item.statusClass === "pending" && (
-                      <button className="btn-millpar-primary">
+                      <button>
                         <i className='bx bx-check' style={{ color: '#ffffff' }}></i>
                       </button>
                     )}
