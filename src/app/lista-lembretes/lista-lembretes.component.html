@@ -1,0 +1,22 @@
+<div class="reminders">
+  <div class="header">
+    <i class='bx bx-note'></i>
+    <h3>Lembretes</h3>
+    <i class='bx bx-filter'></i>
+    <i class='bx bx-plus'></i>
+  </div>
+  <ul class="task-list">
+    <li *ngFor="let task of tasks" [class]="isCompletedClass(task.completed)">
+      <div class="task-info">
+        <div class="task-title">
+          <i [class]="task.completed ? 'bx bx-check-circle' : 'bx bx-x-circle'"></i>
+          <p>"{{ task.title }}"</p>
+        </div>
+        <br />
+        <div class="author-info">
+          <b>Autor: {{ task.user }}</b>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

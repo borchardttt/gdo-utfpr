@@ -7,4 +7,38 @@
   ></app-system-sidebar>
   <div class="content">
     <app-system-navbar></app-system-navbar>
+    <div *ngIf="showDashboard" class="main">
+      <div class="header">
+        <div class="left">
+          <h1>Gestão de Orçamentos UTFPR</h1>
+          <br />
+          <h2>Bem vindo novamente, Usuário!</h2>
+          <ul class="breadcrumb">
+            <li><a href="#">Análise</a></li>
+            <li>/</li>
+            <li><a href="#" class="active">Orçamento 2023</a></li>
+          </ul>
+        </div>
+        <a href="#" class="report">
+          <i class="bx bx-plus"></i>
+          <span>Realizar Movimentação</span>
+        </a>
+      </div>
+      <app-analise-entidade></app-analise-entidade>
+      <div class="bottom-data">
+        <app-movimentacoes-recentes></app-movimentacoes-recentes>
+        <app-lista-lembretes></app-lista-lembretes>
+        <app-login-box></app-login-box>
+      </div>
+    </div>
+    <div *ngIf="showListaMovimentacoes">
+      <app-lista-movimentacoes></app-lista-movimentacoes>
+    </div>
+    <div *ngIf="showListaEntidades">
+      <app-lista-entidades></app-lista-entidades>
+    </div>
+    <div *ngIf="showListaUsuarios">
+      <app-lista-usuarios></app-lista-usuarios>
+    </div>
+  </div>
 </div>

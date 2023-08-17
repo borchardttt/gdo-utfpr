@@ -1,0 +1,26 @@
+<div class="orders">
+  <div class="header">
+    <i class='bx bx-receipt'></i>
+    <h3>Movimentações Recentes</h3>
+    <i class='bx bx-filter'></i>
+    <i class='bx bx-search'></i>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Usuário</th>
+        <th>Data da Movimentação</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movimentacao of movimentacoes">
+        <td>
+          <p>{{ movimentacao.usuario }}</p>
+        </td>
+        <td>{{ movimentacao.data }}</td>
+        <td><span [ngClass]="getStatusClass(movimentacao.status)">{{ movimentacao.status }}</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

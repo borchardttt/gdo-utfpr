@@ -642,70 +642,10 @@ th{
 	cursor: pointer;
 }
 
-.bottom-data .orders{
-	flex-grow: 1;
-	flex-basis: 500px;
-}
-
-.bottom-data .orders table{
-	width: 100%;
-	border-collapse: collapse;
-}
-
-.bottom-data .orders table th{
-	padding-bottom: 12px;
-	font-size: 20px;
-	text-align: left;
-	border-bottom: 1px solid var(--grey);
-}
-
-.bottom-data .orders table td{
-	padding: 16px 0;
-}
-
-.bottom-data .orders table tr td:first-child{
-	display: flex;
-	align-items: center;
-	grid-gap: 12px;
-	padding-left: 6px;
-}
-
-.bottom-data .orders table td img{
-	width: 36px;
-	height: 36px;
-	border-radius: 50%;
-	object-fit: cover;
-}
-
-.bottom-data .orders table tbody tr{
-	cursor: pointer;
-	transition: all 0.3s ease;
-}
-
-.bottom-data .orders table tbody tr:hover{
-	background: var(--grey);
-}
-
-.bottom-data .orders table tr td .status{
-	font-size: 10px;
-	padding: 6px 16px;
-	color: var(--light);
-	border-radius: 20px;
-	font-weight: 700;
-}
-
-.bottom-data .orders table tr td .status.completed{
-	background: var(--verde-escuro);
-}
-
-.bottom-data .orders table tr td .status.process{
-	background: var(--amarelo-utfpr);
-}
-
-.bottom-data .orders table tr td .status.pending{
-	background: var(--amarelo);
-}
 .orders{
+  background-color: #F6F6F9;
+  padding: 1.5rem;
+  border-radius: 10px;
 	flex-grow: 1;
 	flex-basis: 500px;
 }
@@ -746,6 +686,7 @@ th{
 }
 
 .orders table tbody tr:hover{
+  border-radius: 10px;
 	background: var(--grey);
 }
 
@@ -769,8 +710,11 @@ th{
 	background: var(--amarelo);
 }
 .bottom-data .reminders{
+  background-color: #F6F6F9;
+  padding: 1.5rem;
+  border-radius: 10px;
 	flex-grow: 1;
-	flex-basis: 300px;
+	flex-basis: 500px;
 }
 
 .bottom-data .reminders .task-list{
