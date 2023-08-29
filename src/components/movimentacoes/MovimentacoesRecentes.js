@@ -5,9 +5,8 @@ const MovimentacoesRecentes = () => {
     <div className="orders">
       <div className="header">
         <i className='bx bx-receipt'></i>
-        <h3>Movimentações Recentes</h3>
-        <i className='bx bx-filter'></i>
-        <i className='bx bx-search'></i>
+        <h3 className='text-center'>Movimentações Recentes</h3>
+
       </div>
       <table>
         <thead>
@@ -37,7 +36,7 @@ const MovimentacoesRecentes = () => {
               <p>Paulo Soares</p>
             </td>
             <td>14-08-2023</td>
-            <td><span className="status process">Aguardando Aprovação</span></td>
+            <td><span className="status process">Aprovação Pendente</span></td>
           </tr>
         </tbody>
       </table>

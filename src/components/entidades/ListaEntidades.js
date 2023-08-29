@@ -51,7 +51,7 @@ const ListaEntidades = () => {
                   <td>{item.centroDeCusto}</td>
                   <td>{item.gestor}</td>
                   <td>
-										<button>
+										<button className='btn-primary'>
 											<i className='bx bx-show' style={{ color: '#ffffff' }}></i>
 										</button>
                   </td>

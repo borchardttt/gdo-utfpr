@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-
+import logoUTFPR from './utfpr.png';
+import logoUTFPRDark from './utfpr-dark.png';
 const SystemSidebar = ({ onMovimentacoesClick, onDashboardClick, onUsuariosClick, onEntidadesClick }) => {
   useEffect(() => {
     const sideLinks = document.querySelectorAll('.sidebar .side-menu li a:not(.logout)');
@@ -16,10 +17,14 @@ const SystemSidebar = ({ onMovimentacoesClick, onDashboardClick, onUsuariosClick
 
     const menuBar = document.querySelector('.content nav .bx.bx-menu');
     const sideBar = document.querySelector('.sidebar');
+    const logo = document.querySelector("#logo");
     menuBar.addEventListener('click', () => {
       if (sideBar.classList.contains('close')) {
         sideBar.classList.remove('close');
+        logo.classList.add('logo-sidebar-extend');
       } else {
+        logo.classList.remove('logo-sidebar-extend');
+        logo.classList.add('logo-sidebar');
         sideBar.classList.add('close');
       }
     });
@@ -44,6 +49,7 @@ const SystemSidebar = ({ onMovimentacoesClick, onDashboardClick, onUsuariosClick
       if (window.innerWidth < 768) {
         sideBar.classList.add('close');
       } else {
+        logo.classList.add('logo-sidebar-extend');
         sideBar.classList.remove('close');
       }
       if (window.innerWidth > 576) {
@@ -57,7 +63,9 @@ const SystemSidebar = ({ onMovimentacoesClick, onDashboardClick, onUsuariosClick
     toggler.addEventListener('change', function () {
       if (this.checked) {
         document.body.classList.add('dark');
+        logo.src = logoUTFPRDark;
       } else {
+        logo.src = logoUTFPR;
         document.body.classList.remove('dark');
       }
     });
@@ -66,7 +74,9 @@ const SystemSidebar = ({ onMovimentacoesClick, onDashboardClick, onUsuariosClick
   return (
     <div className="sidebar close">
       <a href="#" className="logo">
-        <div className="logo-name">UTFpr</div>
+        <div className="logo-name">
+          <img id='logo' className='logo-sidebar' src={logoUTFPR}></img>
+        </div>
       </a>
       <ul className="side-menu">
         <li onClick={onDashboardClick}>

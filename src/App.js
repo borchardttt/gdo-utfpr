@@ -9,6 +9,8 @@ import ListaMovimentacoes from "./components/movimentacoes/ListaMovimentacoes";
 import ListaEntidades from './components/entidades/ListaEntidades';
 import ListaUsuarios from './components/usuarios/ListaUsuarios';
 import LoginBox from './components/login/LoginBox';
+import Dashboard from './components/dashboard/Dashboard';
+import CadastroUsuarios from './components/usuarios/CadastroUsuarios';
 const App = () => {
   const [showListaMovimentacoes, setShowListaMovimentacoes] = useState(false);
   const [showDashboard, setShowDashboard] = useState(true);
@@ -61,8 +63,6 @@ const App = () => {
             <main>
               <div className="header">
                 <div className="left">
-                  <h1>Gestão de Orçamentos UTFPR</h1>
-                  <br />
                   <h2>Bem vindo novamente, Usuário!</h2>
                   <ul className="breadcrumb">
                     <li><a href="#">Análise</a></li>
@@ -77,9 +77,10 @@ const App = () => {
               </div>
               <AnalisesEntidade />
               <div className="bottom-data">
+                <Dashboard />
                 <MovimentacoesRecentes />
-                <ListaLembretes />
-                <LoginBox />
+                {/* <ListaLembretes /> */}
+                {/* <LoginBox /> */}
               </div>
             </main>
           )}
@@ -87,7 +88,7 @@ const App = () => {
         <transition name="fade">
           {showListaMovimentacoes && <ListaMovimentacoes />}
           {showListaEntidades && <ListaEntidades />}
-          {showListaUsuarios && <ListaUsuarios />}
+          {showListaUsuarios && <ListaUsuarios />} {/* Renderiza somente se showListaUsuarios for true */}
         </transition>
       </div>
     </div>

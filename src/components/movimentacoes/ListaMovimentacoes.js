@@ -30,19 +30,18 @@ const ListaMovimentacoes = () => {
     <div className="styleMain" id="styleMain">
       <div className="orders">
         <div className="header">
-          <h1 className="text-center">Movimentações de Orçamento</h1>
+          <h2 className="text-center">Movimentações de Orçamento</h2>
           <i className='bx bx-search'></i>
         </div>
+        <br />
         <div className='table-responsive'>
           <table>
             <thead>
               <tr className="th">
                 <th>Usuário</th>
                 <th>Mês/Ano</th>
-                <th>Conta Contábil</th>
-                <th>Rubrica</th>
+                <th>Destino</th>
                 <th>Valor</th>
-                <th>Categoria</th>
                 <th>Status</th>
                 <th>Aprovar</th>
               </tr>
@@ -54,10 +53,8 @@ const ListaMovimentacoes = () => {
                     <p>{item.usuario}</p>
                   </td>
                   <td>{item.data}</td>
-                  <td>{item.contaContabil}</td>
                   <td>{item.rubrica}</td>
                   <td>{item.valor}</td>
-                  <td>{item.categoria}</td>
                   <td><span className={`status ${item.statusClass}`}>{item.status}</span></td>
                   <td>
                     {item.statusClass === "pending" && (
