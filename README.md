@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## figma layout available at:
+https://www.figma.com/file/pOThusTUa8mjOyCK8rRaRR/Untitled?type=design&node-id=0%3A1&mode=design&t=NzLmPk2B5JgOo6oV-1
+
 ## Available Scripts
 
 ## figma layout available at:
