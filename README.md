@@ -4,6 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+## figma layout available at:
+https://www.figma.com/file/pOThusTUa8mjOyCK8rRaRR/Untitled?type=design&node-id=0%3A1&mode=design&t=NzLmPk2B5JgOo6oV-1
+
 In the project directory, you can run:
 
 ### `npm start`
