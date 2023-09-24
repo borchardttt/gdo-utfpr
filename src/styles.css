@@ -1,7 +1,10 @@
 /* @import url("https://mss.com/css/mss.css"); */
-@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
 :root {
 	--light: #f6f6f9;
 	--amarelo-utfpr: #FECC00;
@@ -28,10 +31,7 @@
   display: flex;
 }
 
-.password-input input {
-  flex: 1;
-  padding-right: 40px; /* Adicione um espaço à direita para acomodar o ícone */
-}
+
 
 .password-input .eye-icon {
   position: absolute;
@@ -838,3 +838,4 @@ cursor: pointer;
   background-color: var(--amarelo-utfpr);
   color: #fff;
 }
+*/
