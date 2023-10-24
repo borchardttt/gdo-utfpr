@@ -6,14 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
 import { WeatherComponent } from './weather/weather.component';
-import { DeleteUserComponent } from './delete-user/delete-user.component'; // Importe o componente
+import { DeleteUserComponent } from './delete-user/delete-user.component';
+import { UsersListComponent } from './components/users-list/users-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserFormComponent,
     WeatherComponent,
-    DeleteUserComponent
+    DeleteUserComponent,
+    UsersListComponent
   ],
   imports: [
     AppRoutingModule,
