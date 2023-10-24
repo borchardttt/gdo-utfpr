@@ -1,15 +1,16 @@
 <div>
   <h2>Cadastrar Novo Usuário</h2>
-  <!-- aqui usa Interpolation: Exibindo o valor de user.nome no input -->
-  <form (ngSubmit)="onSubmit()">
+  <form (ngSubmit)="onSubmit()" #userForm="ngForm">
     <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" [(ngModel)]="user.nome" required>
+    <input type="text" id="nome" name="nome" [(ngModel)]="user.nome" required pattern="[A-Za-z]+">
+    <div *ngIf="userForm.submitted && userForm.controls['nome'].hasError('required')">Campo Nome é obrigatório.</div>
+    <div *ngIf="userForm.submitted && userForm.controls['nome'].hasError('pattern')">Nome inválido. Use apenas letras.</div>
 
     <label for="email">Email:</label>
-    <!-- Interpolation: Exibe o valor de user.email no input -->
-    <input type="email" id="email" name="email" [(ngModel)]="user.email" required>
+    <input type="email" id="email" name="email" [(ngModel)]="user.email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+    <div *ngIf="userForm.submitted && userForm.controls['email'].hasError('required')">Campo Email é obrigatório.</div>
+    <div *ngIf="userForm.submitted && userForm.controls['email'].hasError('pattern')">Email inválido. Use um formato válido.</div>
 
-    <!-- aqui usa Event Binding: Chamando a função onSubmit() quando o formulário é submetido -->
-    <button type="submit">Cadastrar</button>
+    <button type="submit" [disabled]="!userForm.valid">Cadastrar</button>
   </form>
 </div>
