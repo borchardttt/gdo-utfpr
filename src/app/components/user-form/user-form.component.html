@@ -1,17 +1,24 @@
 <div>
   <h2>Cadastrar Novo Usuário</h2>
-  <!-- aqui usa Interpolation: Exibindo o valor de user.nome no input -->
-  <form (ngSubmit)="onSubmit()" #userForm="ngForm">
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" [(ngModel)]="user.nome" required pattern="[A-Za-z]+">
+  <form (ngSubmit)="onSubmit()" #userForm="ngForm" class="space-y-4">
+    <div class="relative">
+      <label for="nome" class="block text-gray-700">Nome:</label>
+      <div class="flex items-center">
+        <i class="bx bx-user text-2xl"></i>
+        <input class="border border-gray-300 p-2 pl-10 rounded focus:outline-none focus:border-black-500" type="text" id="nome" name="nome" [(ngModel)]="user.nome" required pattern="[A-Za-z+]">
+      </div>
+    </div>
 
+    <div class="relative">
+      <label for="email" class="block text-gray-700">Email:</label>
+      <div class="flex items-center">
+        <i class="bx bx-envelope text-2xl"></i>
+        <input class="border border-gray-300 p-2 pl-10 rounded focus:outline-none focus:border-black-500" type="email" id="email" name="email" [(ngModel)]="user.email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0.9.-]+\.[a-zA-Z]{2,}">
+      </div>
+    </div>
 
-    <!-- Interpolation: Exibe o valor de user.email no input -->
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" [(ngModel)]="user.email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
-
-
-    <!-- aqui usa Event Binding: Chamando a função onSubmit() quando o formulário é submetido -->
-    <button type="submit" [disabled]="!userForm.valid">Cadastrar</button>
+    <button type="submit" [disabled]="!userForm.valid" class="bg-yellow-300 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 focus:outline-none focus:shadow-outline-yellow">
+      Cadastrar
+    </button>
   </form>
 </div>

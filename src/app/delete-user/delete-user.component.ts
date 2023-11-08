@@ -11,7 +11,7 @@ export class DeleteUserComponent {
   userId: number;
   deleted: boolean = false;
 
-  
+
   constructor(private userService: UserService) {
     this.userId = 0; // Defina um valor padrão aqui, como 0 ou -1
   }

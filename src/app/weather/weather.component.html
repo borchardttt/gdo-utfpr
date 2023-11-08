@@ -1,7 +1,6 @@
-<div *ngIf="weatherData">
-    <h1>Clima em Guarapuava</h1>
-    <p>Temperatura: {{ weatherData.main.temp }}°C</p>
-    <p>Umidade: {{ weatherData.main.humidity }}%</p>
-    <p>Condição: {{ weatherData.weather[0].description }}</p>
-  </div>
-  
+<div *ngIf="weatherData" class="bg-white shadow-lg rounded-lg p-4 border border-gray">
+  <h1 class="text-2xl font-semibold">Clima em Guarapuava</h1>
+  <p class="text-lg">Temperatura: {{ weatherData.main.temp }}°C</p>
+  <p class="text-lg">Umidade: {{ weatherData.main.humidity }}%</p>
+  <p class="text-lg">Condição: {{ weatherData.weather[0].description }}</p>
+</div>
