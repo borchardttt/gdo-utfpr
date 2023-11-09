@@ -8,6 +8,7 @@ import { UserFormComponent } from './components/user-form/user-form.component';
 import { WeatherComponent } from './weather/weather.component';
 import { DeleteUserComponent } from './delete-user/delete-user.component';
 import { UsersListComponent } from './components/users-list/users-list.component';
+import { DataListComponent } from './data-list/data-list.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { UsersListComponent } from './components/users-list/users-list.component
     UserFormComponent,
     WeatherComponent,
     DeleteUserComponent,
-    UsersListComponent
+    UsersListComponent,
+    DataListComponent
   ],
   imports: [
     AppRoutingModule,
