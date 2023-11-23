@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class WeatherService {
-  private apiKey = 'fd0db44b54a650549ae01dbaf028d8fd'; // Substitua pela sua chave da API OpenWeatherMap
+  private apiKey = 'fd0db44b54a650549ae01dbaf028d8fd';
   private apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
   private city = 'Guarapuava';
 

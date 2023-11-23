@@ -1,0 +1,19 @@
+<div class="login-box">
+  <img src="/src/assets/img/utfpr.png" alt="Login" style="width: 100%;" />
+  <form>
+    <label for="username">Usuario</label>
+    <input type="text" id="username" />
+
+    <label for="password">Senha</label>
+    <div class="password-input">
+      <input #passwordInput type="password" id="password" />
+      <div class="eye-icon" (click)="handleTogglePassword()">
+        <i [class]="showPassword ? 'bx bx-show' : 'bx bx-hide'"></i>
+      </div>
+    </div>
+    <button type="submit">Login</button>
+  </form>
+  <p>
+    Não tem uma conta? <a target="_blank" href="" rel="noreferrer">Abra uma solicitação</a>
+  </p>
+</div>
