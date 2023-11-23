@@ -1,0 +1,22 @@
+<div class="sidebar" [ngClass]="{'close': isSidebarClosed}">
+  <div class="logo">
+    <div class="bx">Logo</div>
+    <div class="logo-name">
+      <img src="/src/assets/img/utfpr.png" alt="" srcset="">
+    </div>
+  </div>
+  <ul class="side-menu">
+    <li [ngClass]="{'active': isActive('/home')}">
+      <a routerLink="/home">
+        <div class="bx"></div>
+        <i class="bx bx-home"> Home</i>
+      </a>
+    </li>
+    <li [ngClass]="{'active': isActive('/movimentar-orcamento')}">
+      <a routerLink="/movimentar-orcamento">
+        <div class="bx"></div>
+        <i class='bx bx-refresh' ></i>
+      </a>
+    </li>
+  </ul>
+</div>

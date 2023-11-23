@@ -48,14 +48,12 @@ export class MovimentarOrcamentoComponent {
             this.http.put(`https://apigdoutfpr.onrender.com/entidades/${entidadeSelecionada.id}`, entidadeSelecionada)
               .subscribe(response => {
                 console.log('Movimentação realizada com sucesso', response);
-
                 const movimentacao = {
                   autor: this.authService.getAuthenticatedUser(),
                   id: 0,
                   entidade: this.selectedEntidade,
                   justificativa: this.justificativa,
                 };
-
                 this.http.post('https://apigdoutfpr.onrender.com/movimentacoes', movimentacao)
                   .subscribe(movimentacaoResponse => {
                     console.log('Movimentação registrada com sucesso', movimentacaoResponse);

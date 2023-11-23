@@ -7,6 +7,7 @@ import { CriarEntidadeComponent } from './components/criar-entidade/criar-entida
 import { MovimentarOrcamentoComponent } from './components/movimentar-orcamento/movimentar-orcamento.component';
 import { LoginBoxComponent } from './components/login-box/login-box.component';
 import { HomeComponent } from './components/home/home.component';
+import { EntidadesListComponent } from './components/entidades-list/entidades-list.component';
 const routes: Routes = [
   { path: 'criar-user', component: UserFormComponent },
   { path: 'excluir-usuario', component: DeleteUserComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'movimentar-orcamento', component: MovimentarOrcamentoComponent},
   { path: 'login', component: LoginBoxComponent},
   { path: 'home', component: HomeComponent},
+  { path: 'entidades-list', component: EntidadesListComponent},
   { path: '', redirectTo: '/login', pathMatch: 'full' },
 ];
 

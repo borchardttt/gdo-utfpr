@@ -13,6 +13,9 @@ import { MovimentarOrcamentoComponent } from './components/movimentar-orcamento/
 import { LoginBoxComponent } from './components/login-box/login-box.component';
 import { HomeComponent } from './components/home/home.component';
 import { RouterModule } from '@angular/router';
+import { EntidadesListComponent } from './components/entidades-list/entidades-list.component';
+import { SystemSidebarComponent } from './layouts/system-sidebar/system-sidebar.component';
+import { SystemNavbarComponent } from './layouts/system-navbar/system-navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +26,10 @@ import { RouterModule } from '@angular/router';
     CriarEntidadeComponent,
     MovimentarOrcamentoComponent,
     LoginBoxComponent,
-    HomeComponent
+    HomeComponent,
+    EntidadesListComponent,
+    SystemSidebarComponent,
+    SystemNavbarComponent
   ],
   imports: [
     AppRoutingModule,

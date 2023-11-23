@@ -1,0 +1,18 @@
+<div>
+  <h2>Lista de Entidades</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Nome da Entidade</th>
+        <th>Orçamento</th>
+        <th>Orçamento Movimentado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let entidade of entidades">
+        <td>{{ entidade.nome }}</td>
+        <td>{{ entidade.orcamento }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
