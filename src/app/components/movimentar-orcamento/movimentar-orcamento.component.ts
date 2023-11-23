@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { AuthService } from 'src/app/services/auth/auth.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -14,7 +15,7 @@ export class MovimentarOrcamentoComponent {
   saldo: number = 0;
   justificativa: string = '';
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private authService: AuthService) {
     this.fetchEntidades();
   }
 
@@ -48,14 +49,34 @@ export class MovimentarOrcamentoComponent {
               .subscribe(response => {
                 console.log('Movimentação realizada com sucesso', response);
 
-                Swal.fire({
-                  title: 'Movimentação realizada com sucesso!',
-                  icon: 'success',
-                  iconColor: '#FECC00',
-                  html: `Saldo atualizado: ${this.saldo.toFixed(2)}`,
-                  confirmButtonColor: '#FECC00',
-                  confirmButtonText: 'Voltar a movimentar'
-                });
+                const movimentacao = {
+                  autor: this.authService.getAuthenticatedUser(),
+                  id: 0,
+                  entidade: this.selectedEntidade,
+                  justificativa: this.justificativa,
+                };
+
+                this.http.post('https://apigdoutfpr.onrender.com/movimentacoes', movimentacao)
+                  .subscribe(movimentacaoResponse => {
+                    console.log('Movimentação registrada com sucesso', movimentacaoResponse);
+
+                    Swal.fire({
+                      title: 'Movimentação realizada com sucesso!',
+                      icon: 'success',
+                      iconColor: '#FECC00',
+                      html: `Saldo atualizado: ${this.saldo.toFixed(2)}`,
+                      confirmButtonColor: '#FECC00',
+                      confirmButtonText: 'Voltar a movimentar'
+                    });
+                  }, error => {
+                    console.error('Erro ao registrar a movimentação', error);
+                    Swal.fire({
+                      title: 'Erro!',
+                      text: 'Houve um erro ao registrar a movimentação.',
+                      icon: 'error',
+                      confirmButtonColor: '#d84550'
+                    });
+                  });
               }, error => {
                 console.error('Erro ao movimentar orçamento', error);
                 Swal.fire({

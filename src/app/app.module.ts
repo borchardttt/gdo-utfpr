@@ -11,6 +11,8 @@ import { UsersListComponent } from './components/users-list/users-list.component
 import { CriarEntidadeComponent } from './components/criar-entidade/criar-entidade.component';
 import { MovimentarOrcamentoComponent } from './components/movimentar-orcamento/movimentar-orcamento.component';
 import { LoginBoxComponent } from './components/login-box/login-box.component';
+import { HomeComponent } from './components/home/home.component';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,13 +22,15 @@ import { LoginBoxComponent } from './components/login-box/login-box.component';
     UsersListComponent,
     CriarEntidadeComponent,
     MovimentarOrcamentoComponent,
-    LoginBoxComponent
+    LoginBoxComponent,
+    HomeComponent
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
