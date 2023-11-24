@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class EntidadesService {
 
-  private apiUrl = 'http://apigdoutfpr.onrender.com/entidades';
+  private apiUrl = 'https://apigdoutfpr.onrender.com/entidades';
 
   constructor(private http: HttpClient) {}
 

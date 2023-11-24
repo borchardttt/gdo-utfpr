@@ -1,6 +1,6 @@
-// system-sidebar.component.ts
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { SidebarService } from 'src/app/services/sidebar/sidebar.service';
 
 @Component({
   selector: 'app-system-sidebar',
@@ -8,15 +8,27 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./system-sidebar.component.css']
 })
 export class SystemSidebarComponent implements OnInit {
-  isSidebarClosed: boolean = true;
+  isSidebarClosed: boolean = false;
+  isDarkTheme: boolean = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private sidebarService: SidebarService) { }
 
   ngOnInit(): void {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.isSidebarClosed = this.shouldCloseSidebar(event.url);
       }
+    });
+
+    this.sidebarService.isSidebarClosed$.subscribe((isClosed) => {
+      this.isSidebarClosed = isClosed;
+    });
+
+    this.sidebarService.isDarkTheme$.subscribe((isDarkTheme) => {
+      this.isDarkTheme = isDarkTheme;
+
+      const body = document.body;
+      body.classList.toggle('dark', this.isDarkTheme);
     });
   }
 

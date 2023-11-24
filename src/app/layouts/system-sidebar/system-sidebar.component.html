@@ -1,21 +1,44 @@
 <div class="sidebar" [ngClass]="{'close': isSidebarClosed}">
   <div class="logo">
-    <div class="bx">Logo</div>
-    <div class="logo-name">
-      <img src="/src/assets/img/utfpr.png" alt="" srcset="">
-    </div>
+    <img *ngIf="!isDarkTheme" src="../../assets/img/utfpr.png" alt="" srcset="">
+    <img *ngIf="isDarkTheme" src="../../assets/img/utfpr-dark.png" alt="" srcset="">
   </div>
+
   <ul class="side-menu">
     <li [ngClass]="{'active': isActive('/home')}">
       <a routerLink="/home">
-        <div class="bx"></div>
-        <i class="bx bx-home"> Home</i>
+        <i class="bx bx-home"></i>
+        Home
       </a>
     </li>
     <li [ngClass]="{'active': isActive('/movimentar-orcamento')}">
       <a routerLink="/movimentar-orcamento">
-        <div class="bx"></div>
         <i class='bx bx-refresh' ></i>
+        Mover Orçamento
+      </a>
+    </li>
+    <li [ngClass]="{'active': isActive('/entidades-list')}">
+      <a routerLink="/entidades-list" title="Lista de Entidades">
+        <i class='bx bxs-detail'></i>
+        Lista de Entidades
+      </a>
+    </li>
+    <li [ngClass]="{'active': isActive('/criar-entidade')}">
+      <a routerLink="/criar-entidade" title="Criar Entidades">
+        <i class='bx bx-plus'></i>
+        Criar Entidades
+      </a>
+    </li>
+    <li [ngClass]="{'active': isActive('/editar-entidades')}">
+      <a routerLink="/editar-entidades" title="editar Entidades">
+        <i class='bx bxs-edit'></i>
+          Editar Entidades
+      </a>
+    </li>
+    <li [ngClass]="{'active': isActive('/users-list')}">
+      <a routerLink="/users-list" title="Usuários">
+        <i class='bx bx-user'></i>
+        Lista de Usuários
       </a>
     </li>
   </ul>

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -20,6 +20,7 @@
     "@angular/router": "^16.2.0",
     "autoprefixer": "^10.4.16",
     "boxicons": "^2.1.4",
+    "chart.js": "^4.4.0",
     "rxjs": "~7.8.0",
     "sweetalert2": "^11.10.1",
     "tailwindcss": "^3.3.5",

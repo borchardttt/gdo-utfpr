@@ -16,6 +16,8 @@ import { RouterModule } from '@angular/router';
 import { EntidadesListComponent } from './components/entidades-list/entidades-list.component';
 import { SystemSidebarComponent } from './layouts/system-sidebar/system-sidebar.component';
 import { SystemNavbarComponent } from './layouts/system-navbar/system-navbar.component';
+import { DashboardMovimentacoesComponent } from './components/dashboard-movimentacoes/dashboard-movimentacoes.component';
+import { EditarEntidadeComponent } from './components/editar-entidade/editar-entidade.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,9 @@ import { SystemNavbarComponent } from './layouts/system-navbar/system-navbar.com
     HomeComponent,
     EntidadesListComponent,
     SystemSidebarComponent,
-    SystemNavbarComponent
+    SystemNavbarComponent,
+    DashboardMovimentacoesComponent,
+    EditarEntidadeComponent
   ],
   imports: [
     AppRoutingModule,

@@ -1,0 +1,12 @@
+<form (ngSubmit)="salvarEdicao()">
+  <h2>Editar Entidade</h2>
+  <label for="entidades">Entidades:</label>
+  <select class="border border-gray-300 p-2 pl-2 rounded focus:outline-none focus:border-black-500" id="entidades" name="entidades" [(ngModel)]="entidadeSelecionada">
+    <option *ngFor="let entidade of entidades" [value]="entidade.id">{{ entidade.nome }}</option>
+  </select>
+
+  <label for="novoOrcamento">Novo Orçamento:</label>
+  <input class="border border-gray-300 p-2 pl-2 rounded focus:outline-none focus:border-black-500" type="number" id="novoOrcamento" name="novoOrcamento" [(ngModel)]="novoOrcamento" />
+
+  <button class="button-gdo" type="submit" [disabled]="!entidadeSelecionada || entidadeSelecionada === null || novoOrcamento === null">Salvar Edição</button>
+</form>
