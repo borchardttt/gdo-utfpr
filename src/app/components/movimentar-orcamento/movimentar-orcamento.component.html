@@ -1,10 +1,10 @@
-<div>
-  <h2>Movimentar Orçamento</h2>
+<div class="p-5 text-center">
+  <h2 class="text-2xl font-bold mb-4">Movimentar Orçamento</h2>
   <form (ngSubmit)="onSubmit()" #movimentarOrcamentoForm="ngForm" class="space-y-4">
     <div class="relative">
       <label for="entidade" class="block text-gray-700">Entidade:</label>
       <div class="flex items-center">
-        <select class="border border-gray-300 p-2 pl-2 rounded focus:outline-none focus:border-black-500"
+        <select class="border border-gray-300 p-2 pl-2 rounded focus:outline-none focus:border-black-500 w-full"
                 id="entidade" name="entidade" [(ngModel)]="selectedEntidade" required>
           <option *ngFor="let entidade of entidades" [value]="entidade.nome">{{ entidade.nome }}</option>
         </select>
@@ -14,7 +14,7 @@
     <div class="relative">
       <label for="valorMovimentado" class="block text-gray-700">Valor Movimentado:</label>
       <div class="flex items-center">
-        <input class="border border-gray-300 p-2 pl-2 rounded focus:outline-none focus:border-black-500"
+        <input class="border border-gray-300 p-2 pl-2 rounded focus:outline-none focus:border-black-500 w-full"
                type="number" id="valorMovimentado" name="valorMovimentado"
                [(ngModel)]="valorMovimentado" required>
       </div>
@@ -23,7 +23,7 @@
     <div class="relative">
       <label for="justificativa" class="block text-gray-700">Justificativa:</label>
       <div class="flex items-center">
-        <textarea class="border border-gray-300 p-2 pl-2 rounded focus:outline-none focus:border-black-500"
+        <textarea class="border border-gray-300 p-2 pl-2 rounded focus:outline-none focus:border-black-500 w-full"
                   id="justificativa" name="justificativa" [(ngModel)]="justificativa" required></textarea>
       </div>
     </div>
@@ -31,7 +31,7 @@
     <div class="relative">
       <label for="saldo" class="block text-gray-700">Saldo:</label>
       <div class="flex items-center">
-        <input class="border border-gray-300 p-2 pl-2 rounded focus:outline-none focus:border-black-500"
+        <input class="border border-gray-300 p-2 pl-2 rounded focus:outline-none focus:border-black-500 w-full"
                type="text" id="saldo" name="saldo" [(ngModel)]="saldo" disabled>
       </div>
     </div>

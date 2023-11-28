@@ -1,12 +1,19 @@
-<form (ngSubmit)="salvarEdicao()">
-  <h2>Editar Entidade</h2>
-  <label for="entidades">Entidades:</label>
-  <select class="border border-gray-300 p-2 pl-2 rounded focus:outline-none focus:border-black-500" id="entidades" name="entidades" [(ngModel)]="entidadeSelecionada">
-    <option *ngFor="let entidade of entidades" [value]="entidade.id">{{ entidade.nome }}</option>
-  </select>
+<div class="justify-center h-screen bg-gray-100">
+  <form (ngSubmit)="salvarEdicao()" class="p-8 rounded-lg space-y-4 text-center">
+    <h2 class="text-2xl font-bold mb-4">Editar Entidade</h2>
 
-  <label for="novoOrcamento">Novo Orçamento:</label>
-  <input class="border border-gray-300 p-2 pl-2 rounded focus:outline-none focus:border-black-500" type="number" id="novoOrcamento" name="novoOrcamento" [(ngModel)]="novoOrcamento" />
+    <div class="mb-4">
+      <label for="entidades" class="block text-sm font-medium text-gray-600">Entidades:</label>
+      <select class="w-full border border-gray-300 p-2 pl-2 rounded focus:outline-none focus:border-black-500" id="entidades" name="entidades" [(ngModel)]="entidadeSelecionada">
+        <option *ngFor="let entidade of entidades" [value]="entidade.id">{{ entidade.nome }}</option>
+      </select>
+    </div>
 
-  <button class="button-gdo" type="submit" [disabled]="!entidadeSelecionada || entidadeSelecionada === null || novoOrcamento === null">Salvar Edição</button>
-</form>
+    <div class="mb-4">
+      <label for="novoOrcamento" class="block text-sm font-medium text-gray-600">Novo Orçamento:</label>
+      <input class="w-full border border-gray-300 p-2 pl-2 rounded focus:outline-none focus:border-black-500" type="number" id="novoOrcamento" name="novoOrcamento" [(ngModel)]="novoOrcamento" />
+    </div>
+
+    <button type="submit" class="bg-yellow-300 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 focus:outline-none focus:shadow-outline-yellow">Atualizar</button>
+    </form>
+</div>

@@ -1,10 +1,13 @@
 <nav>
   <div class="bx bx-menu" (click)="onBxMenuClick()"></div>
   <form>
-    <div class="form-input">
+    <div class="form-input relative">
       <input type="text" placeholder="Pesquisar..." />
-      <button type="button">Buscar</button>
+      <button type="button" class="search-button">
+        <i class="bx bx-search-alt"></i>
+      </button>
     </div>
   </form>
   <input type="checkbox" id="theme-toggle" class="theme-toggle" (change)="onThemeToggleChange()" />
 </nav>
+
