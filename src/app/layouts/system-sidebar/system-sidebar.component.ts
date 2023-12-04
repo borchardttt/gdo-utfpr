@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { SidebarService } from 'src/app/services/sidebar/sidebar.service';
 
@@ -8,10 +8,14 @@ import { SidebarService } from 'src/app/services/sidebar/sidebar.service';
   styleUrls: ['./system-sidebar.component.css']
 })
 export class SystemSidebarComponent implements OnInit {
-  isSidebarClosed: boolean = false;
+  isSidebarClosed: boolean = this.shouldCloseSidebar(window.location.pathname);
   isDarkTheme: boolean = false;
 
   constructor(private router: Router, private sidebarService: SidebarService) { }
+
+  toggleSidebar(): void {
+    this.isSidebarClosed = !this.isSidebarClosed;
+  }
 
   ngOnInit(): void {
     this.router.events.subscribe((event) => {
@@ -30,6 +34,11 @@ export class SystemSidebarComponent implements OnInit {
       const body = document.body;
       body.classList.toggle('dark', this.isDarkTheme);
     });
+
+    // Verifica novamente após um curto período para garantir que todos os elementos foram carregados
+    setTimeout(() => {
+      this.isSidebarClosed = this.shouldCloseSidebar(window.location.pathname);
+    }, 500);
   }
 
   shouldCloseSidebar(url: string): boolean {
@@ -38,5 +47,15 @@ export class SystemSidebarComponent implements OnInit {
 
   isActive(route: string): boolean {
     return this.router.isActive(route, true);
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any): void {
+    this.isSidebarClosed = this.isMobile();
+  }
+
+  isMobile(): boolean {
+    const breakpoint = 768;
+    return window.innerWidth <= breakpoint;
   }
 }

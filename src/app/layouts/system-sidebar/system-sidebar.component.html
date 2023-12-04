@@ -3,7 +3,9 @@
     <img *ngIf="!isDarkTheme" src="../../assets/img/utfpr.png" alt="" srcset="">
     <img *ngIf="isDarkTheme" src="../../assets/img/utfpr-dark.png" alt="" srcset="">
   </div>
-
+  <div class="hamburger-btn" (click)="toggleSidebar()" *ngIf="isMobile()">
+    <i class="bx bx-menu"></i>
+  </div>
   <ul class="side-menu">
     <li [ngClass]="{'active': isActive('/home')}">
       <a routerLink="/home">
@@ -39,6 +41,12 @@
       <a routerLink="/users-list" title="Usuários">
         <i class='bx bx-user'></i>
         Lista de Usuários
+      </a>
+    </li>
+    <li [ngClass]="{'active': isActive('/criar-user')}">
+      <a routerLink="/criar-user" title="Criar Usuários">
+        <i class='bx bx-user-plus'></i>
+        Criar Usuários
       </a>
     </li>
   </ul>

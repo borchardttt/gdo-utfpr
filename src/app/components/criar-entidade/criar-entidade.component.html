@@ -1,24 +1,29 @@
-<div class="p-5 text-center">
-  <h2 class="text-2xl font-bold mb-4">Cadastrar Nova Entidade</h2>
-  <form (ngSubmit)="onSubmit()" #CriarEntidade="ngForm" class="space-y-4">
-    <div class="relative">
-      <label for="nome" class="block text-gray-700">Nome:</label>
-      <div class="flex items-center">
-        <i class="bx bx-user text-2xl"></i>
-        <input class="border border-gray-300 p-2 pl-10 rounded focus:outline-none focus:border-black-500 w-full" type="text" id="nome" name="nome" [(ngModel)]="entidade.nome" required pattern="[A-Za-z+]">
+<div class="content">
+  <app-system-sidebar></app-system-sidebar>
+  <app-system-navbar></app-system-navbar>
+  <div class="p-5 text-center">
+    <h2 class="text-2xl font-bold mb-4">Cadastrar Nova Entidade</h2>
+    <form (ngSubmit)="onSubmit()" #CriarEntidade="ngForm" class="space-y-4">
+      <div class="relative">
+        <label for="nome" class="block text-gray-700">Nome:</label>
+        <div class="flex items-center">
+          <i class="bx bx-user text-2xl"></i>
+          <input class="border border-gray-300 p-2 pl-10 rounded focus:outline-none focus:border-black-500 w-full" type="text" id="nome" name="nome" [(ngModel)]="entidade.nome" required pattern="[A-Za-z+]">
+        </div>
       </div>
-    </div>
 
-    <div class="relative">
-      <label for="orcamento" class="block text-gray-700">Orçamento para a Entidade:</label>
-      <div class="flex items-center">
-        <i class="bx bx-dollar text-2xl"></i>
-        <input class="border border-gray-300 p-2 pl-10 rounded focus:outline-none focus:border-black-500 w-full" type="number" id="orcamento" name="orcamento" [(ngModel)]="entidade.orcamento" required>
+      <div class="relative">
+        <label for="orcamento" class="block text-gray-700">Orçamento para a Entidade:</label>
+        <div class="flex items-center">
+          <i class="bx bx-dollar text-2xl"></i>
+          <input class="border border-gray-300 p-2 pl-10 rounded focus:outline-none focus:border-black-500 w-full" type="number" id="orcamento" name="orcamento" [(ngModel)]="entidade.orcamento" required>
+        </div>
       </div>
-    </div>
 
-    <button type="submit" class="bg-yellow-300 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 focus:outline-none focus:shadow-outline-yellow">
-      Cadastrar
-    </button>
-  </form>
+      <button type="submit" class="bg-yellow-300 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 focus:outline-none focus:shadow-outline-yellow">
+        Cadastrar
+      </button>
+    </form>
+</div>
+
 </div>

@@ -13,6 +13,7 @@ export class MovimentarOrcamentoComponent {
   selectedEntidade: string = '';
   valorMovimentado: number = 0;
   saldo: number = 0;
+  saldoAtualizado: number = 0;
   justificativa: string = '';
 
   constructor(private http: HttpClient, private authService: AuthService) {
@@ -44,6 +45,7 @@ export class MovimentarOrcamentoComponent {
             entidadeSelecionada['orcamento-movimentado'] = entidadeSelecionada['orcamento-movimentado'] || 0;
             entidadeSelecionada['orcamento-movimentado'] += this.valorMovimentado;
             this.saldo = entidadeSelecionada.orcamento - entidadeSelecionada['orcamento-movimentado'];
+            this.saldoAtualizado = this.saldo;
 
             this.http.put(`https://apigdoutfpr.onrender.com/entidades/${entidadeSelecionada.id}`, entidadeSelecionada)
               .subscribe(response => {
@@ -62,7 +64,7 @@ export class MovimentarOrcamentoComponent {
                       title: 'Movimentação realizada com sucesso!',
                       icon: 'success',
                       iconColor: '#FECC00',
-                      html: `Saldo atualizado: ${this.saldo.toFixed(2)}`,
+                      html: `Saldo atualizado: ${this.saldoAtualizado.toFixed(2)}`,
                       confirmButtonColor: '#FECC00',
                       confirmButtonText: 'Voltar a movimentar'
                     });

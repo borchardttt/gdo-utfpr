@@ -5,7 +5,7 @@
   </div>
 
   <div>
-    <div class="nav">
+    <div class="nav" *ngIf="!isMobile()">
       <app-system-navbar></app-system-navbar>
     </div>
 
@@ -13,7 +13,7 @@
       <main>
         <div class="header">
           <div class="left">
-
+            <p>Bem vindo novamente, <b>{{usuarioLogado}}!</b></p>
           </div>
           <a routerLink="/movimentar-orcamento" class="report">
             <i class='bx bx-plus'></i>
@@ -21,9 +21,7 @@
           </a>
         </div>
 
-        <div class="analises-entidade">
-          Colocar Análises das entidades aqui Alef
-        </div>
+
 
         <div class="bottom-data">
           <div class="dashboard">

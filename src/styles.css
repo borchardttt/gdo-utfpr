@@ -130,6 +130,41 @@ body.dark{
 	--dark: #fbfbfb
 }
 
+body.dark h2, label{
+  color: white;
+}
+/* Estilos para o modo normal */
+.content table {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #000;
+}
+
+.content table th,
+.content table td {
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+}
+
+body.dark .content table {
+  border-color: #4e4e4c;
+  background-color: #181A1E;
+  color: #fff;
+}
+
+body.dark .content table th,
+body.dark .content table td {
+  border-color: #4e4e4c;
+}
+
+body.dark .content table th {
+  background-color: #181A1E;
+}
+
+body.dark .content table tr:hover {
+  background-color: #4e4e4c;
+}
+
 .i-white{
 color: white;
 }
