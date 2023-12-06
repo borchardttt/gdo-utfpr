@@ -36,9 +36,7 @@ export class SystemSidebarComponent implements OnInit {
     });
 
     // Verifica novamente após um curto período para garantir que todos os elementos foram carregados
-    setTimeout(() => {
-      this.isSidebarClosed = this.shouldCloseSidebar(window.location.pathname);
-    }, 500);
+    
   }
 
   shouldCloseSidebar(url: string): boolean {

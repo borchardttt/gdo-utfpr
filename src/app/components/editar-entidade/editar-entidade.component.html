@@ -1,19 +1,31 @@
-<div class="justify-center h-screen bg-gray-100">
-  <form (ngSubmit)="salvarEdicao()" class="p-8 rounded-lg space-y-4 text-center">
+<div class="content">
+  <app-system-sidebar></app-system-sidebar>
+  <app-system-navbar></app-system-navbar>
+  <div class="p-5 text-center">
     <h2 class="text-2xl font-bold mb-4">Editar Entidade</h2>
+    <form (ngSubmit)="salvarEdicao()" class="space-y-4">
+      <div class="relative mb-4">
+        <label for="entidades" class="block text-gray-700">Entidades:</label>
+        <div class="flex items-center">
+          <select class="border border-gray-300 p-2 pl-2 rounded focus:outline-none focus:border-black-500 w-full"
+                  id="entidades" name="entidades" [(ngModel)]="entidadeSelecionada">
+            <option *ngFor="let entidade of entidades" [value]="entidade.id">{{ entidade.nome }}</option>
+          </select>
+        </div>
+      </div>
 
-    <div class="mb-4">
-      <label for="entidades" class="block text-sm font-medium text-gray-600">Entidades:</label>
-      <select class="w-full border border-gray-300 p-2 pl-2 rounded focus:outline-none focus:border-black-500" id="entidades" name="entidades" [(ngModel)]="entidadeSelecionada">
-        <option *ngFor="let entidade of entidades" [value]="entidade.id">{{ entidade.nome }}</option>
-      </select>
-    </div>
+      <div class="relative mb-4">
+        <label for="novoOrcamento" class="block text-gray-700">Novo Orçamento:</label>
+        <div class="flex items-center">
+          <input class="border border-gray-300 p-2 pl-2 rounded focus:outline-none focus:border-black-500 w-full"
+                type="number" id="novoOrcamento" name="novoOrcamento"
+                [(ngModel)]="novoOrcamento" />
+        </div>
+      </div>
 
-    <div class="mb-4">
-      <label for="novoOrcamento" class="block text-sm font-medium text-gray-600">Novo Orçamento:</label>
-      <input class="w-full border border-gray-300 p-2 pl-2 rounded focus:outline-none focus:border-black-500" type="number" id="novoOrcamento" name="novoOrcamento" [(ngModel)]="novoOrcamento" />
-    </div>
-
-    <button type="submit" class="bg-yellow-300 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 focus:outline-none focus:shadow-outline-yellow">Atualizar</button>
+      <button type="submit" class="bg-yellow-300 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 focus:outline-none focus:shadow-outline-yellow">
+        Atualizar
+      </button>
     </form>
+  </div>
 </div>
