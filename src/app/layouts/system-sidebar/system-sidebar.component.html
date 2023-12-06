@@ -3,9 +3,7 @@
     <img *ngIf="!isDarkTheme" src="../../assets/img/utfpr.png" alt="" srcset="">
     <img *ngIf="isDarkTheme" src="../../assets/img/utfpr-dark.png" alt="" srcset="">
   </div>
-  <div class="hamburger-btn" (click)="toggleSidebar()" *ngIf="isMobile()">
-    <i class="bx bx-menu"></i>
-  </div>
+  
   <ul class="side-menu">
     <li [ngClass]="{'active': isActive('/home')}">
       <a routerLink="/home">
@@ -58,4 +56,5 @@
       </a>
     </li>
   </ul>
+  <!--<app-mobile-sidebar *ngIf="isMobile()"></app-mobile-sidebar>-->
 </div>

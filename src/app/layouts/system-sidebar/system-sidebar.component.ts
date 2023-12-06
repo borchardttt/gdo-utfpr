@@ -43,9 +43,9 @@ export class SystemSidebarComponent implements OnInit {
     return !url.includes('/home') && !url.includes('/movimentar-orcamento');
   }
 
-  isActive(route: string): boolean {
+  isActive = (route: string) => {
     return this.router.isActive(route, true);
-  }
+  };
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any): void {

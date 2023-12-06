@@ -18,6 +18,7 @@ import { SystemSidebarComponent } from './layouts/system-sidebar/system-sidebar.
 import { SystemNavbarComponent } from './layouts/system-navbar/system-navbar.component';
 import { DashboardMovimentacoesComponent } from './components/dashboard-movimentacoes/dashboard-movimentacoes.component';
 import { EditarEntidadeComponent } from './components/editar-entidade/editar-entidade.component';
+import { MobileSidebarComponent } from './mobile-sidebar/mobile-sidebar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import { EditarEntidadeComponent } from './components/editar-entidade/editar-ent
     SystemSidebarComponent,
     SystemNavbarComponent,
     DashboardMovimentacoesComponent,
-    EditarEntidadeComponent
+    EditarEntidadeComponent,
+    MobileSidebarComponent
   ],
   imports: [
     AppRoutingModule,
