@@ -26,8 +26,19 @@ export class LoginBoxComponent {
 
   onSubmit(loginForm: NgForm): void {
     if (loginForm.valid) {
+      Swal.fire({
+        title: 'Aguarde...',
+        text: 'Realizando login',
+        icon: 'info',
+        showConfirmButton: false,
+        allowOutsideClick: false,
+        showLoaderOnConfirm: true,
+      });
+
       this.authService.login(this.username, this.password).subscribe(
         (success) => {
+          Swal.close();
+
           if (success) {
             Swal.fire({
               title: 'Login bem-sucedido!',

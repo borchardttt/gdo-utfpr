@@ -19,7 +19,6 @@ export class DashboardMovimentacoesComponent implements OnInit {
         movimentado: entidade['orcamento-movimentado']
       }));
 
-      // Após receber os dados, crie o gráfico
       this.createBarChart();
     });
   }
