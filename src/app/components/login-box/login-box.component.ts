@@ -35,6 +35,18 @@ export class LoginBoxComponent {
         showLoaderOnConfirm: true,
       });
 
+      if (!this.username || !this.password) {
+        Swal.close();
+        Swal.fire({
+          title: 'Campos inválidos',
+          text: 'Preencha todos os campos do formulário.',
+          icon: 'error',
+          confirmButtonColor: '#d84550',
+          confirmButtonText: 'OK',
+        });
+        return;
+      }
+
       this.authService.login(this.username, this.password).subscribe(
         (success) => {
           Swal.close();
@@ -67,6 +79,14 @@ export class LoginBoxComponent {
           });
         }
       );
+    } else {
+      Swal.fire({
+        title: 'Campos inválidos',
+        text: 'Preencha todos os campos do formulário.',
+        icon: 'error',
+        confirmButtonColor: '#d84550',
+        confirmButtonText: 'OK',
+      });
     }
   }
 }

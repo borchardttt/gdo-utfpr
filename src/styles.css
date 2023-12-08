@@ -164,7 +164,24 @@ body.dark .content table th {
 body.dark .content table tr:hover {
   background-color: #4e4e4c;
 }
-
+body.dark label{
+  color: white;
+}
+body.dark p{
+  color: white;
+}
+body.dark i{
+  color: white;
+}
+body.dark span{
+  color: white;
+}
+body.dark canvas{
+  color: white;
+}
+body.dark .sidebar .side-menu li.active a{
+  color: var(--amarelo);
+}
 .i-white{
 color: white;
 }
@@ -368,46 +385,46 @@ body{
 	scrollbar-width: none;
 	transition: all 0.3s ease;
   }
-  
+
   .sidebar.collapsed {
 	width: 60px;
   }
-  
+
   .sidebar ::-webkit-scrollbar {
 	display: none;
   }
-  
+
   .sidebar.collapsed .logo,
   .sidebar.collapsed .side-menu li a {
 	transition: all 0.3s ease;
   }
-  
+
   .sidebar.collapsed .side-menu li a .bx {
 	display: none;
   }
-  
+
   .sidebar.expanded .side-menu li a {
 	padding-left: 20px;
 	padding-right: 20px;
   }
-  
+
   .sidebar.expanded .side-menu li a .bx {
 	display: flex;
   }
-  
+
   .sidebar.expanded .side-menu li a span {
 	display: inline;
   }
-  
+
   .sidebar.collapsed .side-menu li a .bx {
 	display: flex;
 	justify-content: center;
   }
-  
+
   .sidebar.collapsed .side-menu li a span {
 	display: none;
   }
-  
+
   .sidebar .logo {
 	font-size: 15px;
 	font-weight: 700;
@@ -421,46 +438,46 @@ body{
 	box-sizing: content-box;
 	transition: ease-out 0.2s;
   }
-  
+
   .sidebar .logo .logo-name span {
 	color: var(--dark);
   }
-  
+
   .sidebar .logo .bx {
 	min-width: 60px;
 	display: flex;
 	justify-content: center;
 	font-size: 2.2rem;
   }
-  
+
   .sidebar .side-menu {
 	width: 100%;
 	margin-top: 48px;
   }
-  
+
   .table-responsive {
 	display: block;
 	width: 100%;
 	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
   }
-  
+
   .logo-sidebar {
 	transition: ease-out 0.2s;
 	width: 55px;
   }
-  
+
   .logo-sidebar-extend {
 	transition: ease-in-out 0.2s;
 	margin-top: 80px;
 	width: 200px;
 	padding: 0.5rem;
   }
-  
+
   .table-responsive > .table {
 	margin-bottom: 0;
   }
-  
+
   .sidebar .side-menu li {
 	height: 48px;
 	background: transparent;
@@ -468,12 +485,12 @@ body{
 	border-radius: 48px 0 0 48px;
 	padding: 4px;
   }
-  
+
   .sidebar .side-menu li.active {
 	background: var(--grey);
 	position: relative;
   }
-  
+
   .sidebar .side-menu li.active::before {
 	content: "";
 	position: absolute;
@@ -485,7 +502,7 @@ body{
 	box-shadow: 20px 20px 0 var(--grey);
 	z-index: -1;
   }
-  
+
   .sidebar .side-menu li.active::after {
 	content: "";
 	position: absolute;
@@ -497,7 +514,7 @@ body{
 	box-shadow: 20px -20px 0 var(--grey);
 	z-index: -1;
   }
-  
+
   .sidebar .side-menu li a {
 	width: 100%;
 	height: 100%;
@@ -511,64 +528,64 @@ body{
 	overflow-x: hidden;
 	transition: all 0.3s ease;
   }
-  
+
   .sidebar .side-menu li.active a {
 	color: var(--amarelo);
   }
-  
+
   .sidebar.collapsed .side-menu li a {
 	width: calc(48px - (4px * 2));
 	transition: all 0.3s ease;
   }
-  
+
   .sidebar .side-menu li a .bx {
 	min-width: calc(60px - ((4px + 6px) * 2));
 	display: flex;
 	font-size: 1.6rem;
 	justify-content: center;
   }
-  
+
   .sidebar .side-menu li a.logout {
 	color: var(--vermelho-escuro);
   }
-  
+
   .sidebar.close .logo {
 	width: 50px;
 	margin-left: -10px;
   }
-  
+
   .content {
 	position: relative;
 	width: calc(100% - 230px);
 	left: 230px;
 	transition: all 0.3s ease;
   }
-  
+
   .sidebar.collapsed ~ .content {
 	width: calc(100% - 60px);
 	left: 60px;
   }
-  
+
   @media screen and (max-width: 768px) {
 	.sidebar {
 	  width: 55px;
 	}
-  
+
 	.content {
 	  width: calc(100% - 55px);
-	  left: 53px; 
+	  left: 53px;
 	}
-  
+
 	.sidebar.collapsed {
 	  width: 0;
 	}
-  
+
 	.sidebar.collapsed ~ .content {
 	  left: 0;
 	  width: 100%;
 	}
   }
-  
+
 
 
 .content nav{
@@ -886,9 +903,10 @@ h1{
 	justify-content: center;
 }
 .styleMain{
+  margin-top: 1rem;
+  margin-left: 8rem;
 	padding: 20px;
-	margin: 45px 35px;
-	width: auto;
+	width: 80%;
 	background-color: #F6F6F9;
 	border-radius: 26px;
 }
