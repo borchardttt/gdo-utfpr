@@ -1,9 +1,9 @@
 <div class="sidebar" [ngClass]="{'close': isSidebarClosed}">
   <div class="logo">
-    <img *ngIf="!isDarkTheme" src="../../assets/img/utfpr.png" alt="" srcset="">
-    <img *ngIf="isDarkTheme" src="../../assets/img/utfpr-dark.png" alt="" srcset="">
+    <img *ngIf="!isDarkTheme" src="assets/img/utfpr.png" alt="" srcset="">
+    <img *ngIf="isDarkTheme" src="assets/img/utfpr-dark.png" alt="" srcset="">
   </div>
-  
+
   <ul class="side-menu">
     <li [ngClass]="{'active': isActive('/home')}">
       <a routerLink="/home">
