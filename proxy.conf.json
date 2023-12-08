@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "http://apigdoutfpr.onrender.com",
+    "target": "https://apigdoutfpr.onrender.com",
     "secure": false,
     "changeOrigin": true
   }

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'http://apigdoutfpr.onrender.com/users';
+  private apiUrl = 'https://apigdoutfpr.onrender.com/users';
 
   constructor(private http: HttpClient) {}
 
