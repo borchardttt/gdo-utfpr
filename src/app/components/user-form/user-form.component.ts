@@ -9,7 +9,8 @@ import { HttpClient } from '@angular/common/http';
 export class UserFormComponent {
   user = {
     nome: '',
-    email: ''
+    email: '',
+    senha: ''
   };
 
   constructor(private http: HttpClient) {}
@@ -24,7 +25,8 @@ export class UserFormComponent {
 
           this.user = {
             nome: '',
-            email: ''
+            email: '',
+            senha: ''
           };
         }, error => {
           console.error('Erro ao cadastrar usuário', error);

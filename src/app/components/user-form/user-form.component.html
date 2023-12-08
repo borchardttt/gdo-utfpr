@@ -1,26 +1,41 @@
 <div class="content">
   <app-system-navbar></app-system-navbar>
   <app-system-sidebar></app-system-sidebar>
-  <h2>Cadastrar Novo Usuário</h2>
-  <form (ngSubmit)="onSubmit()" #userForm="ngForm" class="space-y-4">
-    <div class="relative">
-      <label for="nome" class="block text-gray-700">Nome:</label>
-      <div class="flex items-center">
-        <i class="bx bx-user text-2xl"></i>
-        <input class="border border-gray-300 p-2 pl-10 rounded focus:outline-none focus:border-black-500" type="text" id="nome" name="nome" [(ngModel)]="user.nome" required pattern="[A-Za-z+]">
+  <div class="p-5 text-center">
+    <h2 class="text-2xl font-bold mb-4">Cadastrar Novo Usuário</h2>
+    <form (ngSubmit)="onSubmit()" #userForm="ngForm" class="space-y-4">
+      <div class="relative flex items-center">
+        <label for="nome" class="block text-gray-700">Nome:</label>
+        <i class="bx bx-user text-2xl ml-2"></i>
+        <input
+          class="border border-gray-300 p-2 pl-10 rounded focus:outline-none focus:border-black-500 w-full"
+          type="text" id="nome" name="nome" [(ngModel)]="user.nome" required pattern="[A-Za-z+]"
+        />
       </div>
-    </div>
 
-    <div class="relative">
-      <label for="email" class="block text-gray-700">Email:</label>
-      <div class="flex items-center">
-        <i class="bx bx-envelope text-2xl"></i>
-        <input class="border border-gray-300 p-2 pl-10 rounded focus:outline-none focus:border-black-500" type="email" id="email" name="email" [(ngModel)]="user.email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0.9.-]+\.[a-zA-Z]{2,}">
+      <div class="relative flex items-center">
+        <label for="email" class="block text-gray-700">Email:</label>
+        <i class="bx bx-envelope text-2xl ml-2"></i>
+        <input
+          class="border border-gray-300 p-2 pl-10 rounded focus:outline-none focus:border-black-500 w-full"
+          type="email" id="email" name="email" [(ngModel)]="user.email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0.9.-]+\.[a-zA-Z]{2,}"
+        />
+
       </div>
-    </div>
-
-    <button type="submit" class="bg-yellow-300 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 focus:outline-none focus:shadow-outline-yellow">
-      Cadastrar
-    </button>
-  </form>
+      <div class="relative flex items-center">
+        <label for="email" class="block text-gray-700">Senha:</label>
+        <i class="bx bx-lock text-2xl ml-2"></i>
+        <input
+        class="border border-gray-300 p-2 pl-10 rounded focus:outline-none focus:border-black-500 w-full"
+        type="senha" id="senha" name="senha" [(ngModel)]="user.senha" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0.9.-]+\.[a-zA-Z]{2,}"
+      />
+      </div>  
+      <button
+        type="submit"
+        class="bg-yellow-300 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 focus:outline-none focus:shadow-outline-yellow"
+      >
+        Cadastrar
+      </button>
+    </form>
+  </div>
 </div>
